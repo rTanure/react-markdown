@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Markdown from 'react-markdown'
 
 function App() {
