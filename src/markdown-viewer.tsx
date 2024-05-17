@@ -5,8 +5,11 @@ import Markdown from "react-markdown";
 
 export function MarkdownViewer({ value }: MarkdownViewerProps) {
   return (
-    <div className="w-full h-full p-4">
-      <Markdown components={{
+    <div className="w-full h-full p-4 flex flex-col">
+      <Markdown 
+      className="h-full"
+      components={{
+        
         h1(props) {return <h2 className="text-4xl font-semibold border-b pb-2 mb-10">{props.children}</h2>},
         h2(props) {return <h3 className="text-3xl font-semibold">{props.children}</h3>},
         h3(props) {return <h4 className="text-2xl font-semibold">{props.children}</h4>},
