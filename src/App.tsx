@@ -1,19 +1,18 @@
-import Markdown from 'react-markdown'
+import { useState } from 'react'
+import { MarkdownEditor } from './markdown-editor'
 
 function App() {
-
-  const content = `
-# Olá
-## Aqui é um subtitulo
-
-Aqui é um parágrafo
-
-  `
+  const [content, setContent] = useState<string>('')
 
   return (
-    <>
-      <Markdown>{content}</Markdown>
-    </>
+    <div className='grid grid-cols-2 h-screen'>
+      <div>
+        <MarkdownEditor value={content} onChange={setContent}/>
+      </div>
+      <div>
+        <h1>Teste</h1>
+      </div>
+    </div>
   )
 }
 
