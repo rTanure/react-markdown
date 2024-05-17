@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { MarkdownEditor } from './markdown-editor'
+import { MarkdownViewer } from './markdown-viewer'
 
 function App() {
   const [content, setContent] = useState<string>('')
@@ -10,7 +11,7 @@ function App() {
         <MarkdownEditor value={content} onChange={setContent}/>
       </div>
       <div>
-        <h1>Teste</h1>
+        <MarkdownViewer value={content}/>
       </div>
     </div>
   )
